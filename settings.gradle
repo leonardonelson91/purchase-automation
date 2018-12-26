@@ -8,3 +8,6 @@
  */
 
 rootProject.name = 'purchase-automation'
+
+include "ui-automation"
+include "api-automation"

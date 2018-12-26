@@ -1,0 +1,5 @@
+apply from: "../build.gradle"
+
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.+'
+}
