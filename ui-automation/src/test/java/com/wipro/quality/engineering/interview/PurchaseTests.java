@@ -1,5 +1,6 @@
 package com.wipro.quality.engineering.interview;
 
+import com.wipro.quality.engineering.interview.pages.MercadoLivrePage;
 import org.junit.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,6 +15,7 @@ public class PurchaseTests {
 
     private static ChromeDriverService service;
     private WebDriver driver;
+    private MercadoLivrePage home;
 
     @BeforeClass
     public static void createAndStartService() throws IOException, URISyntaxException {
@@ -42,6 +44,12 @@ public class PurchaseTests {
 
     @Test
     public void testPurchaseProducts() {
+        MercadoLivrePage home = new MercadoLivrePage(driver);
+        home.visit();
+        home.findProduct("Pebolim");
+        home.submitSearch();
+
+
 
     }
 }
